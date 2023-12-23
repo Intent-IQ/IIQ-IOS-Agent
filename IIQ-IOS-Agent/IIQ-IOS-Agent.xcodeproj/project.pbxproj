@@ -15,6 +15,7 @@
 		DAF08C352B3728EC00EF0F98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF08C342B3728EC00EF0F98 /* ContentView.swift */; };
 		DAF08C372B3728ED00EF0F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF08C362B3728ED00EF0F98 /* Assets.xcassets */; };
 		DAF08C3A2B3728ED00EF0F98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF08C392B3728ED00EF0F98 /* Preview Assets.xcassets */; };
+		DAF08C3F2B37295200EF0F98 /* IIQAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF08C3E2B37295200EF0F98 /* IIQAgent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DAF08C342B3728EC00EF0F98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DAF08C362B3728ED00EF0F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF08C392B3728ED00EF0F98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DAF08C3E2B37295200EF0F98 /* IIQAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIQAgent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				DAF08C152B37282D00EF0F98 /* IIQ_IOS_Agent.h */,
 				DAF08C162B37282D00EF0F98 /* IIQ_IOS_Agent.docc */,
+				DAF08C3E2B37295200EF0F98 /* IIQAgent.swift */,
 			);
 			path = "IIQ-IOS-Agent";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAF08C172B37282D00EF0F98 /* IIQ_IOS_Agent.docc in Sources */,
+				DAF08C3F2B37295200EF0F98 /* IIQAgent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +496,7 @@
 		DAF08C2A2B37282D00EF0F98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2962U4WU9F;
@@ -512,6 +517,7 @@
 		DAF08C2B2B37282D00EF0F98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2962U4WU9F;
