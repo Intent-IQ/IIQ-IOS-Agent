@@ -16,8 +16,7 @@ public class IIQAgent {
     private var active: Bool = false
     private var pid:Int64;
     
-    init(partnerId: Int64) {
-        
+    public init(partnerId: Int64) {
         self.pid = partnerId
         print("Agent configured successfully")
         self.active = true;
@@ -67,5 +66,9 @@ public class IIQAgent {
     private func retrieveIDFA() {
         let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
         print("IDFA: \(idfa)")
+    }
+    
+    public func isActive() -> Bool{
+        return self.active
     }
 }

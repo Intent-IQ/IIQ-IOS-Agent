@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAA688432B38295300E80664 /* IIQ_IOS_Agent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF08C122B37282D00EF0F98 /* IIQ_IOS_Agent.framework */; };
+		DAA688442B38295300E80664 /* IIQ_IOS_Agent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAF08C122B37282D00EF0F98 /* IIQ_IOS_Agent.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DAF08C172B37282D00EF0F98 /* IIQ_IOS_Agent.docc in Sources */ = {isa = PBXBuildFile; fileRef = DAF08C162B37282D00EF0F98 /* IIQ_IOS_Agent.docc */; };
 		DAF08C1D2B37282D00EF0F98 /* IIQ_IOS_Agent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF08C122B37282D00EF0F98 /* IIQ_IOS_Agent.framework */; };
 		DAF08C222B37282D00EF0F98 /* IIQ_IOS_AgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF08C212B37282D00EF0F98 /* IIQ_IOS_AgentTests.swift */; };
@@ -28,7 +30,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DAA688452B38295300E80664 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DAA688442B38295300E80664 /* IIQ_IOS_Agent.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DAA688462B382AA800E80664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DAF08C122B37282D00EF0F98 /* IIQ_IOS_Agent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IIQ_IOS_Agent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF08C152B37282D00EF0F98 /* IIQ_IOS_Agent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IIQ_IOS_Agent.h; sourceTree = "<group>"; };
 		DAF08C162B37282D00EF0F98 /* IIQ_IOS_Agent.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = IIQ_IOS_Agent.docc; sourceTree = "<group>"; };
@@ -62,12 +79,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA688432B38295300E80664 /* IIQ_IOS_Agent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAA688412B3827AF00E80664 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DAF08C082B37282D00EF0F98 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +100,7 @@
 				DAF08C202B37282D00EF0F98 /* IIQ-IOS-AgentTests */,
 				DAF08C312B3728EC00EF0F98 /* IIQ-IOS-Agent-Example */,
 				DAF08C132B37282D00EF0F98 /* Products */,
+				DAA688412B3827AF00E80664 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +135,7 @@
 		DAF08C312B3728EC00EF0F98 /* IIQ-IOS-Agent-Example */ = {
 			isa = PBXGroup;
 			children = (
+				DAA688462B382AA800E80664 /* Info.plist */,
 				DAF08C322B3728EC00EF0F98 /* IIQ_IOS_Agent_ExampleApp.swift */,
 				DAF08C342B3728EC00EF0F98 /* ContentView.swift */,
 				DAF08C362B3728ED00EF0F98 /* Assets.xcassets */,
@@ -182,6 +209,7 @@
 				DAF08C2C2B3728EC00EF0F98 /* Sources */,
 				DAF08C2D2B3728EC00EF0F98 /* Frameworks */,
 				DAF08C2E2B3728EC00EF0F98 /* Resources */,
+				DAA688452B38295300E80664 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +232,7 @@
 				TargetAttributes = {
 					DAF08C112B37282D00EF0F98 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = "";
 					};
 					DAF08C1B2B37282D00EF0F98 = {
 						CreatedOnToolsVersion = 15.0;
@@ -554,6 +583,7 @@
 				DEVELOPMENT_TEAM = 2962U4WU9F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IIQ-IOS-Agent-Example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -589,6 +619,7 @@
 				DEVELOPMENT_TEAM = 2962U4WU9F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IIQ-IOS-Agent-Example/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

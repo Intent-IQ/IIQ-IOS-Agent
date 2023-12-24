@@ -6,14 +6,21 @@
 //
 
 import SwiftUI
+import IIQ_IOS_Agent
 
 struct ContentView: View {
+    let iiqAgent = IIQAgent(partnerId: 1232456)
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Button("Click me") {
+                           // This code will be executed when the button is clicked
+                print("Agent is active \(iiqAgent.isActive())")
+                       }
         }
         .padding()
     }
