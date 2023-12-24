@@ -10,7 +10,7 @@ import Foundation
 import AdSupport
 import AppTrackingTransparency
 
-public class IIAAgent {
+public class IIQAgent {
     
     
     private var active: Bool = false
@@ -22,6 +22,10 @@ public class IIAAgent {
         print("Agent configured successfully")
         self.active = true;
         initIDFA();
+    }
+    
+    public func getPartnerId() -> Int64 {
+        return self.pid
     }
     
     func initIDFA() {
