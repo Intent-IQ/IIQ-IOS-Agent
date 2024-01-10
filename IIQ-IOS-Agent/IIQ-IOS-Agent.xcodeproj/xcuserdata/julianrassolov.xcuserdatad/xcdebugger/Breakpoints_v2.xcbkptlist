@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "29701935-3631-4707-8B4E-05C305678127"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3925C34F-E9B1-4105-AC79-6DFE0A276E7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IIQ-IOS-Agent-Example/LogView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "19CF0890-629A-4FC9-A029-7A2E0A4A417C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IIQ-IOS-Agent/RequestBuilder.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "prepareUrl()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5F3B83E-084E-4BAC-8E3D-E27E6BB98815"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IIQ-IOS-Agent/IIQLogService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "Log(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B5F3B83E-084E-4BAC-8E3D-E27E6BB98815 - b53aa041002bf9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IIQ_IOS_Agent.IIQLogService.Log(Swift.String) -&gt; ()"
+                  moduleName = "IIQ_IOS_Agent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julianrassolov/Desktop/DEV/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQLogService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "B5F3B83E-084E-4BAC-8E3D-E27E6BB98815 - b54f420db25d0d8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in IIQ_IOS_Agent.IIQLogService.Log(Swift.String) -&gt; ()"
+                  moduleName = "IIQ_IOS_Agent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julianrassolov/Desktop/DEV/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQLogService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9069158-C7AD-4162-BE41-C62B24B3345A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IIQ-IOS-Agent/IIQLogService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "Log(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9069158-C7AD-4162-BE41-C62B24B3345A - b54f420db25d0dc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in IIQ_IOS_Agent.IIQLogService.Log(Swift.String) -&gt; ()"
+                  moduleName = "IIQ_IOS_Agent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julianrassolov/Desktop/DEV/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQLogService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "B9069158-C7AD-4162-BE41-C62B24B3345A - b54f420db25d0de9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in IIQ_IOS_Agent.IIQLogService.Log(Swift.String) -&gt; ()"
+                  moduleName = "IIQ_IOS_Agent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julianrassolov/Desktop/DEV/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQLogService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A736FBC-B97D-48B6-A45B-D8077C0D2785"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IIQ-IOS-Agent/IIQLogService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "Log(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0A736FBC-B97D-48B6-A45B-D8077C0D2785 - b54f420db25d0dc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in IIQ_IOS_Agent.IIQLogService.Log(Swift.String) -&gt; ()"
+                  moduleName = "IIQ_IOS_Agent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julianrassolov/Desktop/DEV/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQLogService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "0A736FBC-B97D-48B6-A45B-D8077C0D2785 - b54f420db25d0dc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in IIQ_IOS_Agent.IIQLogService.Log(Swift.String) -&gt; ()"
+                  moduleName = "IIQ_IOS_Agent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julianrassolov/Desktop/DEV/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQLogService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "212">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC3408D3-AD36-4057-B3BB-C83ABD07D0DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IIQ-IOS-Agent/IIQLogService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "Log(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FC3408D3-AD36-4057-B3BB-C83ABD07D0DD - b54f420db25d0ce1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in IIQ_IOS_Agent.IIQLogService.Log(Swift.String) -&gt; ()"
+                  moduleName = "IIQ_IOS_Agent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julianrassolov/Desktop/DEV/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQLogService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "980">
+               </Location>
+               <Location
+                  uuid = "FC3408D3-AD36-4057-B3BB-C83ABD07D0DD - b54f420db25d0ce1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in IIQ_IOS_Agent.IIQLogService.Log(Swift.String) -&gt; ()"
+                  moduleName = "IIQ_IOS_Agent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julianrassolov/Desktop/DEV/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQ-IOS-Agent/IIQLogService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "860">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

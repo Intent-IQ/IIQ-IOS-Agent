@@ -1,0 +1,6 @@
+framework module Pods_IIQ_IOS_Agent_Example {
+  umbrella header "Pods-IIQ-IOS-Agent-Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

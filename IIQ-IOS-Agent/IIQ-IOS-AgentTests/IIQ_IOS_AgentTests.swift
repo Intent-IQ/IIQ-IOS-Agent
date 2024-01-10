@@ -34,6 +34,12 @@ class IIQ_IOS_AgentTests: XCTestCase {
         XCTAssertEqual(iiqAgent.getPartnerId(),pid)
     }
     
+    func testUserProvidedIDFA() {
+        let localIdfa = "abc"
+        let localAgent = IIQAgent(partnerId: 1234567, usersIdfa: localIdfa)
+        XCTAssertEqual(iiqAgent.getIdfa(),localIdfa)
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

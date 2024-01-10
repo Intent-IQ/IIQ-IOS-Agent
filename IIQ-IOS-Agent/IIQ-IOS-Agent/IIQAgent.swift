@@ -9,66 +9,70 @@ import Foundation
 
 import AdSupport
 import AppTrackingTransparency
+import SwiftUI
 
-public class IIQAgent {
+public class IIQAgent : ObservableObject {
+    
+    public static let shared = IIQAgent()
+    private init() {
+       }
+    
+    @Published public var iiqData: VRData?
+    @Published public var prebidData: IIQPrebidData?
+    
+    private let logger = IIQLogService.shared
+    private let identityModule:IdentityModule = IdentityModule.shared
+    private var pid:Int64 = -1;
+    private var userConfiguration: IIQUserConfiguration = IIQUserConfiguration(pid: -1)
+    private var requestHandler:VRRequestHandler?
+    
+    public func initialize(partnerId: Int64, ip:String = "" , loggerMode:IIQLoggerMode = IIQLoggerMode.NONE) {
+        logger.setLoggerMode(mode: loggerMode)
+        pid = partnerId;
+        userConfiguration = IIQUserConfiguration(pid: pid)
+        userConfiguration.currentIp = ip;
+        requestHandler = VRRequestHandler(userConfiguration: userConfiguration)
+        logger.Log("Agent configured successfully")
+        initABTesting();
+        identityModule.prepareUrl(requestBuilder: requestHandler!.requestBuilder)
+        self.mainBody()
+    }
     
     
-    private var active: Bool = false
-    private var pid:Int64;
-    
-    public init(partnerId: Int64) {
-        self.pid = partnerId
-        print("Agent configured successfully")
-        self.active = true;
-        initIDFA();
+    private func mainBody() {
+        self.userConfiguration.storeAllData()
+        if userConfiguration.currentABGroup == "A" {
+            requestHandler!.getIIQData()
+        }
     }
     
     public func getPartnerId() -> Int64 {
         return self.pid
     }
     
-    func initIDFA() {
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-                DispatchQueue.main.async {
-                    if status == .authorized {
-                        self.retrieveIDFA()
-                    } else {
-                        print("IDFA access is not authorized. Requesting authorization...")
-                        self.requestAuthorization()
-                    }
-                }
-            }
+    private func initABTesting() {
+        if userConfiguration.currentABGroup != "U" {
+            logger.Log("IIQ Agent Retrieved current group: \(userConfiguration.currentABGroup)")
         } else {
-            // Fallback for iOS versions prior to 14
-            if ASIdentifierManager.shared().isAdvertisingTrackingEnabled {
-                self.retrieveIDFA()
+            let randomNumber = Double.random(in: 0...100)
+            
+            if randomNumber <= userConfiguration.ABPercentage {
+                userConfiguration.currentABGroup = "A"
             } else {
-                print("IDFA is not available or tracking is disabled.")
-                self.active = false
+                userConfiguration.currentABGroup = "B"
             }
+            logger.Log("IIQ Agent : generating new AB group : \(userConfiguration.currentABGroup)")
+            self.userConfiguration.storeABGroup()
         }
+        requestHandler!.requestBuilder.addParam("abtg", userConfiguration.currentABGroup)
     }
 
-    private func requestAuthorization() {
-        ATTrackingManager.requestTrackingAuthorization { status in
-            DispatchQueue.main.async {
-                if status == .authorized {
-                    self.retrieveIDFA()
-                } else {
-                    print("IDFA access is still not authorized.")
-                    self.active = false
-                }
-            }
-        }
-    }
-
-    private func retrieveIDFA() {
-        let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-        print("IDFA: \(idfa)")
+    
+    public func printIIQDataToDefaultLogger(){
+        logger.Log(self.iiqData!.prettyPrint())
     }
     
-    public func isActive() -> Bool{
-        return self.active
+    public func printPrebidDataToDefaultLogger(){
+        logger.Log((self.prebidData?.prettyPrint())!)
     }
 }

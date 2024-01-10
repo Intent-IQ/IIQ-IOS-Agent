@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA87BEF62B3B5371004E061E /* PrebidRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87BEF52B3B5371004E061E /* PrebidRunner.swift */; };
+		DA8D49092B38D49E00914D9E /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D49082B38D49E00914D9E /* RequestBuilder.swift */; };
+		DA8D490B2B38DAD500914D9E /* VRResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D490A2B38DAD500914D9E /* VRResponse.swift */; };
+		DA8D490D2B38E66D00914D9E /* IIQPrebidId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D490C2B38E66D00914D9E /* IIQPrebidId.swift */; };
+		DA8D490F2B39484C00914D9E /* IIQUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D490E2B39484C00914D9E /* IIQUserConfiguration.swift */; };
+		DA8D49112B394A7B00914D9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D49102B394A7B00914D9E /* Constants.swift */; };
+		DA8D49132B394A9700914D9E /* IIQUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D49122B394A9700914D9E /* IIQUtils.swift */; };
+		DA8D49152B399CF300914D9E /* IIQLoggerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D49142B399CF300914D9E /* IIQLoggerMode.swift */; };
+		DA8D49172B39F85300914D9E /* VRRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D49162B39F85300914D9E /* VRRequestHandler.swift */; };
 		DAA688432B38295300E80664 /* IIQ_IOS_Agent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF08C122B37282D00EF0F98 /* IIQ_IOS_Agent.framework */; };
 		DAA688442B38295300E80664 /* IIQ_IOS_Agent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAF08C122B37282D00EF0F98 /* IIQ_IOS_Agent.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DAA6884C2B38AD9C00E80664 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6884B2B38AD9C00E80664 /* ConfigView.swift */; };
+		DAA6884E2B38B39700E80664 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6884D2B38B39700E80664 /* LogView.swift */; };
+		DAA688532B38C7F800E80664 /* IIQLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA688512B38BEFE00E80664 /* IIQLogService.swift */; };
+		DADAA5B32B4F1780005F44A6 /* IdentityModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADAA5B22B4F1780005F44A6 /* IdentityModule.swift */; };
 		DAF08C172B37282D00EF0F98 /* IIQ_IOS_Agent.docc in Sources */ = {isa = PBXBuildFile; fileRef = DAF08C162B37282D00EF0F98 /* IIQ_IOS_Agent.docc */; };
 		DAF08C1D2B37282D00EF0F98 /* IIQ_IOS_Agent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF08C122B37282D00EF0F98 /* IIQ_IOS_Agent.framework */; };
 		DAF08C222B37282D00EF0F98 /* IIQ_IOS_AgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF08C212B37282D00EF0F98 /* IIQ_IOS_AgentTests.swift */; };
@@ -18,9 +31,17 @@
 		DAF08C372B3728ED00EF0F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF08C362B3728ED00EF0F98 /* Assets.xcassets */; };
 		DAF08C3A2B3728ED00EF0F98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF08C392B3728ED00EF0F98 /* Preview Assets.xcassets */; };
 		DAF08C3F2B37295200EF0F98 /* IIQAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF08C3E2B37295200EF0F98 /* IIQAgent.swift */; };
+		DEB370C082C4F9778DC0A3EA /* Pods_IIQ_IOS_Agent_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C58D219550386F02C58014E /* Pods_IIQ_IOS_Agent_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DAA688492B38A42600E80664 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF08C092B37282D00EF0F98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAF08C112B37282D00EF0F98;
+			remoteInfo = "IIQ-IOS-Agent";
+		};
 		DAF08C1E2B37282D00EF0F98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAF08C092B37282D00EF0F98 /* Project object */;
@@ -45,7 +66,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C58D219550386F02C58014E /* Pods_IIQ_IOS_Agent_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IIQ_IOS_Agent_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CCE2766C8D639C73DF54243 /* Pods-IIQ-IOS-Agent-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IIQ-IOS-Agent-Example.release.xcconfig"; path = "Target Support Files/Pods-IIQ-IOS-Agent-Example/Pods-IIQ-IOS-Agent-Example.release.xcconfig"; sourceTree = "<group>"; };
+		C7BEFA760FE3751B786D0776 /* Pods-IIQ-IOS-Agent-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IIQ-IOS-Agent-Example.debug.xcconfig"; path = "Target Support Files/Pods-IIQ-IOS-Agent-Example/Pods-IIQ-IOS-Agent-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DA87BEF52B3B5371004E061E /* PrebidRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebidRunner.swift; sourceTree = "<group>"; };
+		DA8D49082B38D49E00914D9E /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		DA8D490A2B38DAD500914D9E /* VRResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRResponse.swift; sourceTree = "<group>"; };
+		DA8D490C2B38E66D00914D9E /* IIQPrebidId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIQPrebidId.swift; sourceTree = "<group>"; };
+		DA8D490E2B39484C00914D9E /* IIQUserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIQUserConfiguration.swift; sourceTree = "<group>"; };
+		DA8D49102B394A7B00914D9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA8D49122B394A9700914D9E /* IIQUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIQUtils.swift; sourceTree = "<group>"; };
+		DA8D49142B399CF300914D9E /* IIQLoggerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIQLoggerMode.swift; sourceTree = "<group>"; };
+		DA8D49162B39F85300914D9E /* VRRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRRequestHandler.swift; sourceTree = "<group>"; };
 		DAA688462B382AA800E80664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DAA6884B2B38AD9C00E80664 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		DAA6884D2B38B39700E80664 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		DAA688512B38BEFE00E80664 /* IIQLogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IIQLogService.swift; sourceTree = "<group>"; };
+		DADAA5B22B4F1780005F44A6 /* IdentityModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityModule.swift; sourceTree = "<group>"; };
 		DAF08C122B37282D00EF0F98 /* IIQ_IOS_Agent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IIQ_IOS_Agent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF08C152B37282D00EF0F98 /* IIQ_IOS_Agent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IIQ_IOS_Agent.h; sourceTree = "<group>"; };
 		DAF08C162B37282D00EF0F98 /* IIQ_IOS_Agent.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = IIQ_IOS_Agent.docc; sourceTree = "<group>"; };
@@ -80,15 +117,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA688432B38295300E80664 /* IIQ_IOS_Agent.framework in Frameworks */,
+				DEB370C082C4F9778DC0A3EA /* Pods_IIQ_IOS_Agent_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA781118578A1D79D7F12738 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7BEFA760FE3751B786D0776 /* Pods-IIQ-IOS-Agent-Example.debug.xcconfig */,
+				8CCE2766C8D639C73DF54243 /* Pods-IIQ-IOS-Agent-Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DAA688412B3827AF00E80664 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C58D219550386F02C58014E /* Pods_IIQ_IOS_Agent_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,6 +149,7 @@
 				DAF08C312B3728EC00EF0F98 /* IIQ-IOS-Agent-Example */,
 				DAF08C132B37282D00EF0F98 /* Products */,
 				DAA688412B3827AF00E80664 /* Frameworks */,
+				CA781118578A1D79D7F12738 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +167,17 @@
 			isa = PBXGroup;
 			children = (
 				DAF08C152B37282D00EF0F98 /* IIQ_IOS_Agent.h */,
+				DAA688512B38BEFE00E80664 /* IIQLogService.swift */,
+				DA8D490A2B38DAD500914D9E /* VRResponse.swift */,
 				DAF08C3E2B37295200EF0F98 /* IIQAgent.swift */,
+				DADAA5B22B4F1780005F44A6 /* IdentityModule.swift */,
+				DA8D490E2B39484C00914D9E /* IIQUserConfiguration.swift */,
+				DA8D49102B394A7B00914D9E /* Constants.swift */,
+				DA8D49122B394A9700914D9E /* IIQUtils.swift */,
+				DA8D49082B38D49E00914D9E /* RequestBuilder.swift */,
+				DA8D49142B399CF300914D9E /* IIQLoggerMode.swift */,
+				DA8D490C2B38E66D00914D9E /* IIQPrebidId.swift */,
+				DA8D49162B39F85300914D9E /* VRRequestHandler.swift */,
 				DAF08C162B37282D00EF0F98 /* IIQ_IOS_Agent.docc */,
 			);
 			path = "IIQ-IOS-Agent";
@@ -138,6 +197,9 @@
 				DAA688462B382AA800E80664 /* Info.plist */,
 				DAF08C322B3728EC00EF0F98 /* IIQ_IOS_Agent_ExampleApp.swift */,
 				DAF08C342B3728EC00EF0F98 /* ContentView.swift */,
+				DAA6884B2B38AD9C00E80664 /* ConfigView.swift */,
+				DAA6884D2B38B39700E80664 /* LogView.swift */,
+				DA87BEF52B3B5371004E061E /* PrebidRunner.swift */,
 				DAF08C362B3728ED00EF0F98 /* Assets.xcassets */,
 				DAF08C382B3728ED00EF0F98 /* Preview Content */,
 			);
@@ -206,14 +268,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAF08C3B2B3728ED00EF0F98 /* Build configuration list for PBXNativeTarget "IIQ-IOS-Agent-Example" */;
 			buildPhases = (
+				93A3D014B2D6970FB5E9631D /* [CP] Check Pods Manifest.lock */,
 				DAF08C2C2B3728EC00EF0F98 /* Sources */,
 				DAF08C2D2B3728EC00EF0F98 /* Frameworks */,
 				DAF08C2E2B3728EC00EF0F98 /* Resources */,
 				DAA688452B38295300E80664 /* Embed Frameworks */,
+				676C2B5C43B8837C4E208278 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DAA6884A2B38A42600E80664 /* PBXTargetDependency */,
 			);
 			name = "IIQ-IOS-Agent-Example";
 			productName = "IIQ-IOS-Agent-Example";
@@ -288,13 +353,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		676C2B5C43B8837C4E208278 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IIQ-IOS-Agent-Example/Pods-IIQ-IOS-Agent-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IIQ-IOS-Agent-Example/Pods-IIQ-IOS-Agent-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IIQ-IOS-Agent-Example/Pods-IIQ-IOS-Agent-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93A3D014B2D6970FB5E9631D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IIQ-IOS-Agent-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DAF08C0E2B37282D00EF0F98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8D49152B399CF300914D9E /* IIQLoggerMode.swift in Sources */,
 				DAF08C172B37282D00EF0F98 /* IIQ_IOS_Agent.docc in Sources */,
+				DAA688532B38C7F800E80664 /* IIQLogService.swift in Sources */,
+				DADAA5B32B4F1780005F44A6 /* IdentityModule.swift in Sources */,
+				DA8D490D2B38E66D00914D9E /* IIQPrebidId.swift in Sources */,
+				DA8D490F2B39484C00914D9E /* IIQUserConfiguration.swift in Sources */,
+				DA8D49132B394A9700914D9E /* IIQUtils.swift in Sources */,
 				DAF08C3F2B37295200EF0F98 /* IIQAgent.swift in Sources */,
+				DA8D49092B38D49E00914D9E /* RequestBuilder.swift in Sources */,
+				DA8D49172B39F85300914D9E /* VRRequestHandler.swift in Sources */,
+				DA8D490B2B38DAD500914D9E /* VRResponse.swift in Sources */,
+				DA8D49112B394A7B00914D9E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +427,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA6884C2B38AD9C00E80664 /* ConfigView.swift in Sources */,
+				DAA6884E2B38B39700E80664 /* LogView.swift in Sources */,
+				DA87BEF62B3B5371004E061E /* PrebidRunner.swift in Sources */,
 				DAF08C352B3728EC00EF0F98 /* ContentView.swift in Sources */,
 				DAF08C332B3728EC00EF0F98 /* IIQ_IOS_Agent_ExampleApp.swift in Sources */,
 			);
@@ -318,6 +438,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DAA6884A2B38A42600E80664 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAF08C112B37282D00EF0F98 /* IIQ-IOS-Agent */;
+			targetProxy = DAA688492B38A42600E80664 /* PBXContainerItemProxy */;
+		};
 		DAF08C1F2B37282D00EF0F98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DAF08C112B37282D00EF0F98 /* IIQ-IOS-Agent */;
@@ -574,6 +699,7 @@
 		};
 		DAF08C3C2B3728ED00EF0F98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7BEFA760FE3751B786D0776 /* Pods-IIQ-IOS-Agent-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -582,8 +708,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"IIQ-IOS-Agent-Example/Preview Content\"";
 				DEVELOPMENT_TEAM = 2962U4WU9F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IIQ-IOS-Agent-Example/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "IIQ Tester";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -610,6 +738,7 @@
 		};
 		DAF08C3D2B3728ED00EF0F98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CCE2766C8D639C73DF54243 /* Pods-IIQ-IOS-Agent-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -618,8 +747,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"IIQ-IOS-Agent-Example/Preview Content\"";
 				DEVELOPMENT_TEAM = 2962U4WU9F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IIQ-IOS-Agent-Example/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "IIQ Tester";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

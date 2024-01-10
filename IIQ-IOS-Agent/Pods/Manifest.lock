@@ -1,0 +1,18 @@
+PODS:
+  - PrebidMobile (2.1.6):
+    - PrebidMobile/core (= 2.1.6)
+  - PrebidMobile/core (2.1.6)
+
+DEPENDENCIES:
+  - PrebidMobile
+
+SPEC REPOS:
+  trunk:
+    - PrebidMobile
+
+SPEC CHECKSUMS:
+  PrebidMobile: 628c9803af299a13511d3f945a6db9b39d3c3862
+
+PODFILE CHECKSUM: 92aa736f6bd3cee4f25fbe37679617e3d5a784e7
+
+COCOAPODS: 1.14.3
