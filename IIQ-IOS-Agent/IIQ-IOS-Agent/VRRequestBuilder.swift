@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RequestBuilder  {
+class VRRequestBuilder  {
  
     private var parameters: [String: String] = [:]
     

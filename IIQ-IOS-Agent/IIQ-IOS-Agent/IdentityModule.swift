@@ -19,6 +19,7 @@ class IdentityModule{
         initIDFA()
         initIDFV()
         prepareCppaStringValue()
+        updateClientType()
     }
     
     
@@ -27,7 +28,23 @@ class IdentityModule{
     private var idfv:String = ""
     private var permissionStatus:Int = -1
     private var usPapyString = "1YYY"
+    private var client_id_type = 1
     
+    public func getClientId() -> Int{
+        return client_id_type
+    }
+    
+    private func updateClientType(){
+        if (self.isAuthorized && self.idfa != "00000000-0000-0000-0000-000000000000") {
+            self.client_id_type = 4
+        } else {
+            self.client_id_type = 1
+        }
+    }
+    
+    public func getUspapi() -> String{
+        return self.usPapyString
+    }
     
     private func prepareCppaStringValue(){
         //1YYY - no consent
@@ -37,7 +54,7 @@ class IdentityModule{
         }
     }
     
-    func prepareUrl(requestBuilder: RequestBuilder?) {
+    func prepareUrl(requestBuilder: VRRequestBuilder?) {
 
         guard let requestBuilder = requestBuilder else {
                 return
@@ -59,7 +76,7 @@ class IdentityModule{
         if let identifierForVendor = UIDevice.current.identifierForVendor {
             self.idfv = identifierForVendor.uuidString
             self.logger.Log("IDFV detected: \(self.idfv)")
-            }
+        }
         else {
             self.logger.Log("Failed to get IDFV ")
             self.idfv = ""

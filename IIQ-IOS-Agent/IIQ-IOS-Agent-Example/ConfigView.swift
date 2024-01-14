@@ -12,6 +12,7 @@ struct ConfigView: View {
     @State private var partnerID: String = "1573968118"
     @State private var ip: String = "173.235.128.196"
     @State private var showAlert = false
+    @State private var showAlert1 = false
     
     @ObservedObject var iiqAgent: IIQAgent
     
@@ -30,28 +31,53 @@ struct ConfigView: View {
             TextField("IP", text: $ip)
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-            
-            Button("Init Agent") {
-                if let pid = Int64(partnerID) {
-                    print("Partner ID:", pid)
-                    IIQAgent.shared.initialize(partnerId: pid,ip:ip,loggerMode: IIQLoggerMode.BOTH)
-                } else {
-                    print("Failed to convert the partner id to a number.")
-                    showAlert = true
+            HStack{
+                Button("Init Agent") {
+                    if let pid = Int64(partnerID) {
+                        print("Partner ID:", pid)
+                        IIQAgent.shared.initialize(partnerId: pid,ip:ip,loggerMode: IIQLoggerMode.BOTH)
+                    } else {
+                        print("Failed to convert the partner id to a number.")
+                        showAlert = true
+                    }
+                }
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .cornerRadius(8)
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Bad Configuration"),
+                        message: Text("Partner ID should be a number."),
+                        dismissButton: .default(Text("OK"))
+                    )
                 }
                 
+                Button("Send demy report") {
+                    print("Send data pressed")
+                    IIQAgent.shared.reportImpression(userData: IIQImpressionReport(
+                            biddingPlatformId: 1,
+                            partnerAuctionId: "A123",
+                            bidderCode: "BidderXYZ",
+                            prebidAuctionId: "PB456",
+                            cpm: 5.99,
+                            currency: "USD",
+                            originalCpm: 6.99,
+                            originalCurrency: "USD",
+                            status: "Active",
+                            placementId: "P789"
+                        ) )
+                    
+                }
+                .padding()
+                .foregroundColor(.white)
+                .background(IIQAgent.shared.isInitialized() ? Color.blue : Color.gray)
+                .cornerRadius(8)
+//                .disabled(IIQAgent.shared.isInitialized())
+              
+                
             }
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(
-                    title: Text("Bad Configuration"),
-                    message: Text("Partner ID should be a number."),
-                    dismissButton: .default(Text("OK"))
-                )
-            }
+            
             HStack{
                 VStack{
                     Circle()

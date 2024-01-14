@@ -18,14 +18,23 @@ public class IIQUserConfiguration {
     var data:VRResponse?
     var dataReceptionDate: Int64?
     var currentIp: String
+    var agentId:String = ""
     
     init(pid: Int64){
         self.pid = pid
         currentIp = ""
+        self.agentId = UUID().uuidString
         loadAllData()
     }
     
     private func loadAllData(){
+        
+        if let savedAgentId = UserDefaults.standard.string(forKey: IIQConstants.userStoreKeys.agentIdKeyName) {
+            self.agentId = savedAgentId
+            logger.Log("Retreived Agent ID stored data: \(savedAgentId)")
+        } else {
+            logger.Log("No Agent ID stored stored yet. Using new one : \(self.agentId)")
+        }
         
         if let savedAbPercentage = UserDefaults.standard.string(forKey: IIQConstants.userStoreKeys.percentageKeyName) {
             if let doubleValue = Double(savedAbPercentage) {
@@ -70,12 +79,18 @@ public class IIQUserConfiguration {
         storeAbPercentage()
         storeDataReceptionDate()
         storeVRData()
+        storegentId()
     }
     
    
     public func storeABGroup(){
         UserDefaults.standard.set(self.currentABGroup, forKey: IIQConstants.userStoreKeys.groupKeyName)
     }
+    
+    public func storegentId(){
+        UserDefaults.standard.set(self.agentId, forKey: IIQConstants.userStoreKeys.agentIdKeyName)
+    }
+    
     public func storeAbPercentage(){
         UserDefaults.standard.set("\(self.ABPercentage)", forKey: IIQConstants.userStoreKeys.percentageKeyName)
     } 

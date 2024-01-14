@@ -14,25 +14,44 @@ class VRRequestHandler{
     
     private var userConfiguration:IIQUserConfiguration;
     private let logger = IIQLogService.shared
-    public var requestBuilder = RequestBuilder()
+    public var requestBuilder = VRRequestBuilder()
     
     private func updateIIQData(){
-        IIQAgent.shared.iiqData = self.userConfiguration.data?.data
-
+        DispatchQueue.main.async {
+            IIQAgent.shared.iiqData = self.userConfiguration.data?.data
+        }
     }
     private func updatePrebidData(){
         IIQAgent.shared.prebidData = IIQPrebidData(data: (self.userConfiguration.data?.extructIIQPrebidIds())!)
 
     }
     
-    func getIIQData() {
+    
+    func sendImpressionReport(builder: ImpressionRequestBuilder){
+        if let unwrappedUrl = builder.getUrl() {
+            logger.Log("Impression URL : \(unwrappedUrl)")
+            let url = URL(string: unwrappedUrl)!;
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    self.logger.Log("IIQ Agent Impression report Error: \(error)")
+                } else if let httpResponse = response as? HTTPURLResponse {
+                    self.logger.Log("IIQ Agent Impression Report status: \(httpResponse.statusCode)")
+                }
+            }
+            task.resume()
+        } else {
+            logger.Log("Failed to construct Impression report URL")
+        }
+    }
+    
+    func getIIQData() -> Bool {
         if self.userConfiguration.currentABGroup == "B" || self.userConfiguration.currentABGroup == "U"  {
-            return
+            return false
         }
         
-       
+        var wasServerCalled = false;
         let timeDifference =   ((userConfiguration.data?.cttl ?? -1) + userConfiguration.dataReceptionDate!) - IIQUtils.getCurrentDateInMilliseconds()
-   
+            
             if timeDifference > 0 {
                 logger.Log("-----------------------------------------")
                 logger.Log("Data is still valid - skipping VR request")
@@ -41,7 +60,7 @@ class VRRequestHandler{
                 
                 self.updateIIQData()
                 self.updatePrebidData()
-                return
+                return wasServerCalled;
                 
             }
         
@@ -56,7 +75,7 @@ class VRRequestHandler{
         if let unwrappedUrl = requestBuilder.getUrl() {
             logger.Log("VR URL : \(unwrappedUrl)")
             let url = URL(string: unwrappedUrl)!;
-            
+            wasServerCalled = true
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
                     self.logger.Log("IIQ Agent Error: \(error)")
@@ -89,7 +108,8 @@ class VRRequestHandler{
             task.resume()
         } else {
             logger.Log("Failed to construct VR URL")
-            return
+            return wasServerCalled
         }
+        return wasServerCalled
     }
 }

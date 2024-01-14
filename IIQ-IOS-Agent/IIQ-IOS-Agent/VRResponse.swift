@@ -9,9 +9,12 @@ struct VRResponse: Codable {
     var cttl: Int64?
     let tc: Int
     let sid: Int
+    let pid: String?
+    let dea: Int?
+    let ekv: String?
     
 
-    init(adt: Int, ct: Int, data: Any?, dbsaved: Bool, ls: Bool, cttl: Int64?, tc: Int, sid: Int) {
+    init(adt: Int, ct: Int, data: Any?, dbsaved: Bool, ls: Bool, cttl: Int64?, tc: Int, sid: Int, pid: String?, dea: Int?, ekv:String?) {
         self.adt = adt
         self.ct = ct
         self.dbsaved = dbsaved
@@ -19,6 +22,9 @@ struct VRResponse: Codable {
         self.cttl = cttl
         self.tc = tc
         self.sid = sid
+        self.pid = pid
+        self.dea = dea
+        self.ekv = ekv
         
         guard let unwrappedData = data else {
             self.data = VRData(eids: [])
@@ -59,6 +65,9 @@ struct VRResponse: Codable {
         cttl = try? container.decode(Int64.self, forKey: .cttl)
         tc = try container.decode(Int.self, forKey: .tc)
         sid = try container.decode(Int.self, forKey: .sid)
+        pid = try? container.decode(String.self, forKey: .pid)
+        dea = try? container.decode(Int.self, forKey: .dea)
+        ekv = try? container.decode(String.self, forKey: .ekv)
     }
 
     func prettyPrint() -> String? {
